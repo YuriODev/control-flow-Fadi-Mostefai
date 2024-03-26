@@ -1,23 +1,8 @@
 # Your solution to Exercise 7
 
 def calc(op1, op2, operand):
-    if operand == "+":
-        return str(op1 + op2)
-    elif operand == "-":
-        return str(op1 - op2)
-    elif operand == "*":
-        return str(op1 * op2)
-    elif operand == "/":
-        if op2 != 0:
-            return str(op1 / op2)
-        else:
-            return "Division by 0!"
-    elif operand == "mod":
-        return str(op1 % op2)
-    elif operand == "pow":
-        return str(op1 ** op2)
-    elif operand == "div":
-        return str(op1 // op2)
+    return str(op1 + op2) if operand == "+" else str(op1 - op2) if operand == "-" else str(op1 * op2) if operand == "*" else str(op1 % op2) if operand == "mod" else str(op1 ** op2) if operand == "pow" else str(op1 // op2) if operand == "div" and op2 != 0 else str(op1 / op2) if operand == "/" and op2 != 0 else "Division by 0!"
+
     
 num1 = float(input())
 num2 = float(input())
